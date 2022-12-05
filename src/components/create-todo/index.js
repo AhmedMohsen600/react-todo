@@ -21,7 +21,6 @@ export default function CreateTodo({ addTodo }) {
     setTodo((prev) => {
       return {
         ...prev,
-
         [name]: value,
       };
     });
