@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { CreateTodo, Todo } from '..';
+import './todo-parent.css';
 
 export default function TodoParent() {
   const [todos, setTodos] = useState([]);
