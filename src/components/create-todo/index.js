@@ -6,7 +6,7 @@ export default function CreateTodo({ addTodo }) {
     content: '',
   });
 
-  const handelClick = (e) => {
+  const handelSubmit = (e) => {
     e.preventDefault();
     addTodo(todo);
     setTodo({
@@ -27,7 +27,7 @@ export default function CreateTodo({ addTodo }) {
   };
 
   return (
-    <form onSubmit={handelClick}>
+    <form onSubmit={handelSubmit}>
       <input
         placeholder="type your name"
         onChange={handelChange}
