@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './create-todo.css';
 
 export default function CreateTodo({ addTodo }) {
   const [todo, setTodo] = useState({
@@ -6,7 +7,7 @@ export default function CreateTodo({ addTodo }) {
     content: '',
   });
 
-  const handelClick = (e) => {
+  const handelSubmit = (e) => {
     e.preventDefault();
     addTodo(todo);
     setTodo({
@@ -21,14 +22,13 @@ export default function CreateTodo({ addTodo }) {
     setTodo((prev) => {
       return {
         ...prev,
-
         [name]: value,
       };
     });
   };
 
   return (
-    <form onSubmit={handelClick}>
+    <form onSubmit={handelSubmit}>
       <input
         placeholder="type your name"
         onChange={handelChange}

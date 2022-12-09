@@ -1,3 +1,5 @@
+import './todo.css';
+
 export default function Todo({ name, content, id, removeTodo }) {
   const handleRemove = () => {
     removeTodo(id);
